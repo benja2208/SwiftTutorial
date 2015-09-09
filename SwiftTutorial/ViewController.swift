@@ -20,6 +20,22 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBOutlet var toDoTextField: UITextField!
+    
+    var toDoArray : [String] = []
+    
+    func addStringToArray(){
+        let toDoString = toDoTextField.text
+        toDoArray.append(toDoString)
+    }
 
+    @IBAction func saveButtonTapped(sender: AnyObject) {
+        let toDoText = toDoTextField.text
+        addStringToArray();
+        print addStringToArray();
+        print(toDoText!)
+    }
+    
+    
 }
 
